@@ -1,20 +1,15 @@
-# 📊 Análise de Churn – Telecom
+#  Análise de Churn – Telecom
 
 Identificação dos fatores associados ao cancelamento de clientes em uma empresa de telecomunicações.
 
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-
----
-
-## 🎯 Objetivo
+##  Objetivo
 
 Neste projeto analisei uma base de dados fictícia do Kaggle com dados de clientes de uma empresa de Telecom, com o objetivo de descobrir qual perfil de clientes apresenta maior churn.
 
 **Pergunta principal:**
 > Quais características estão mais presentes nos clientes que cancelam?
 
-## 🗂️ Base de dados
+## Base de dados
 
 [Telco Customer Churn Data – Kaggle](https://www.kaggle.com/datasets/dhrubangtalukdar/telco-customer-churn-data?resource=download)
 
@@ -30,9 +25,8 @@ Neste projeto analisei uma base de dados fictícia do Kaggle com dados de client
 | `TotalCharges` | Total de cobranças |
 | `Churn` | Se o cliente cancelou o serviço ou não |
 
----
 
-## 🧹 Limpeza de dados
+## Limpeza de dados
 
 Antes de iniciar as análises, foi realizada uma etapa de limpeza para garantir a qualidade e a consistência das informações utilizadas no projeto. Principais inconsistências encontradas e tratadas:
 
