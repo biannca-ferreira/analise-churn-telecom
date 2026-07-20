@@ -47,7 +47,7 @@ Os valores monetários não estavam com os separadores decimais corretos. Cada c
 <img src="images/data-cleaning-04-negative-totalcharges.png" alt="Correção de valores negativos" width="550"/>
 
 **4. Ruído em `TotalCharges`**
-Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então foi mantido — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
+Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então os ruídos foram mantidos — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
 
 >  Todo o processo de limpeza, incluindo os comandos SQL utilizados, está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
 
