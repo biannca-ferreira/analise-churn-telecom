@@ -126,7 +126,7 @@ O objetivo do dashboard foi transformar as análises realizadas em SQL em uma fe
 
 A maior taxa de churn foi observada entre clientes com contratos **Month-to-Month (46,56%)**, significativamente superior aos contratos de 1 ano (16,75%) e 2 anos (16,88%) — indicando que contratos de curto prazo favorecem a decisão de cancelamento.
 
-O tempo de permanência também é um fator relevante: embora o tempo médio até o churn seja de aproximandamente 31 meses, a maior concentração de cancelamentos ocorre nos **primeiros 12 meses**, período em que a taxa de churn alcança **64,01%**. Isso sugere que os primeiros meses são decisivos para a retenção, podendo indicar dificuldades no onboarding, na adaptação ao serviço ou na geração de valor logo após a contratação.
+O tempo de permanência também é um fator relevante: embora o tempo médio até o churn seja de aproximadamente 31 meses, a maior concentração de cancelamentos ocorre nos **primeiros 12 meses**, período em que a taxa de churn alcança **64,01%**. Isso sugere que os primeiros meses são decisivos para a retenção, podendo indicar dificuldades no onboarding, na adaptação ao serviço ou na geração de valor logo após a contratação.
 
 A mensalidade também mostrou forte relação com o cancelamento: clientes que pagam mais de **$100/mês** têm taxa de churn de **52,46%**, o que pode indicar percepção insuficiente de custo-benefício nos planos de maior valor.
 
