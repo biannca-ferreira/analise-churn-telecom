@@ -76,7 +76,7 @@ Após a limpeza, foi realizada uma Análise Exploratória de Dados (EDA) com o o
 | Churn em clientes com mensalidade mais alta | **52,46%** |
 | Tempo médio até o churn | **31 meses** (mediana de 28 meses) |
 
-> Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./querys/02%20-%20EDA.sql).
+> Todas as consultas utilizadas na EDA estão disponíveis em [02 - EDA.sql](https://github.com/biannca-ferreira/analise-churn-telecom/blob/main/Querys/02%20-%20EDA.sql)
 
 ## Preparação dos dados para o dashboard
 
@@ -91,7 +91,7 @@ Antes de conectar os dados ao Power BI, foi criada uma **view** no SQL Server co
 
 <img src="images/dashboard-view-sql.png" alt="View criada para o dashboard" width="650"/>
 
-> O código completo da view está disponível em [`03 - View_Dashboard.sql`](./querys/03%20-%20View_Dashboard.sql).
+> O código completo da view está disponível em [03 - View_Dashboard.sql](https://github.com/biannca-ferreira/analise-churn-telecom/blob/main/Querys/03%20-%20View_Dashboard.sql).
 
 
 ## Visualização dos dados
