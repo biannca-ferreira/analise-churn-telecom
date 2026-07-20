@@ -49,11 +49,10 @@ Os valores monetários não estavam com os separadores decimais corretos. Cada c
 **4. Ruído em `TotalCharges`**
 Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então foi mantido — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
 
-> 📄 Todo o processo de limpeza, incluindo os comandos SQL utilizados, está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
+>  Todo o processo de limpeza, incluindo os comandos SQL utilizados, está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
 
----
 
-## 🔎 Análise Exploratória (EDA)
+## Análise Exploratória (EDA)
 
 Após a limpeza, foi realizada uma Análise Exploratória de Dados (EDA) com o objetivo de compreender o comportamento da base, identificar padrões e definir quais variáveis seriam utilizadas nas análises e no dashboard.
 
@@ -79,13 +78,11 @@ As perguntas de gênero, método de pagamento, faixa etária e risco futuro são
 | Churn em clientes com até 12 meses | **64,01%** |
 | Churn em contratos Month-to-Month | **46,56%** |
 | Churn em clientes com mensalidade mais alta | **52,46%** |
-| Tempo médio até o churn | **30 meses** (mediana de 28 meses) |
+| Tempo médio até o churn | **31 meses** (mediana de 28 meses) |
 
 > 📄 Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./02%20-%20EDA.sql).
 
----
-
-## ⚙️ Preparação dos dados para o dashboard
+## Preparação dos dados para o dashboard
 
 Antes de conectar os dados ao Power BI, foi criada uma **view** no SQL Server com o objetivo de evitar transformações desnecessárias no Power BI e centralizar a lógica de preparação dos dados no banco.
 
@@ -98,17 +95,16 @@ Antes de conectar os dados ao Power BI, foi criada uma **view** no SQL Server co
 
 <img src="images/dashboard-view-sql.png" alt="View criada para o dashboard" width="650"/>
 
-> 📄 O código completo da view está disponível em [`03 - View_Dashboard.sql`](./03%20-%20View_Dashboard.sql).
+> O código completo da view está disponível em [`03 - View_Dashboard.sql`](./03%20-%20View_Dashboard.sql).
 
----
 
-## 📈 Visualização dos dados
+## Visualização dos dados
 
 O objetivo do dashboard foi transformar as análises realizadas em SQL em uma ferramenta visual e interativa, permitindo acompanhar os principais indicadores de churn e identificar rapidamente os fatores associados ao cancelamento.
 
 <img src="images/dashboard-overview.png" alt="Dashboard de Análise de Churn Telecom" width="800"/>
 
-🔗 **[Acessar o dashboard](#)** <!-- inserir link do dashboard -->
+**[Acessar o dashboard](#)** <!-- [inserir link do dashboard](https://app.powerbi.com/view?r=eyJrIjoiZWJmOGY3OGEtMzU5NS00ZDljLWE3YTgtNzhmNTI2OGRjOThjIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9) -->
 
 **Planejamento do dashboard:**
 - Definir os melhores indicadores
@@ -129,9 +125,8 @@ O objetivo do dashboard foi transformar as análises realizadas em SQL em uma fe
 | **Clientes por Risco de Churn** | Quantos clientes estão em baixo/alto risco vs. churn já realizado |
 | **Segmentações** | Filtros por gênero e faixa etária, aplicáveis a todos os KPIs e gráficos |
 
----
 
-## 💡 Insights
+## Insights
 
 A maior taxa de churn foi observada entre clientes com contratos **Month-to-Month (46,56%)**, significativamente superior aos contratos de 1 ano (16,75%) e 2 anos (16,88%) — indicando que contratos de curto prazo favorecem a decisão de cancelamento.
 
@@ -141,9 +136,8 @@ A mensalidade também mostrou forte relação com o cancelamento: clientes que p
 
 Os contratos Month-to-Month representam o maior impacto econômico para a empresa, concentrando aproximadamente **73,65%** de toda a receita mensal perdida — cerca de **$2,1 milhões** em receita comprometida.
 
----
 
-## ✅ Conclusão
+## Conclusão
 
 Os resultados indicam que o churn não ocorre de forma aleatória, mas está concentrado em um perfil específico de clientes: aqueles com **contratos flexíveis (Month-to-Month)**, **pouco tempo de relacionamento** com a empresa (até 12 meses) e **mensalidades mais elevadas** (acima de $100).
 
@@ -157,21 +151,10 @@ Como os contratos Month-to-Month concentram cerca de **$2,1 milhões** em receit
 
 > *Esta análise identifica correlações entre as características dos clientes e o churn, mas não estabelece relações de causa e efeito. Os resultados servem para direcionar investigações e ações de negócio, que devem ser complementadas por análises adicionais e testes para validar a eficácia das estratégias propostas.*
 
----
 
-## 🛠️ Ferramentas utilizadas
+## Ferramentas utilizadas
 
 - **SQL Server** — limpeza, tratamento e análise exploratória dos dados
 - **Power BI** — construção do dashboard interativo
 
----
 
-## 📁 Estrutura do repositório
-
-```
-├── 01 - Limpeza_de_Dados.sql
-├── 02 - EDA.sql
-├── 03 - View_Dashboard.sql
-├── images/
-└── README.md
-```
