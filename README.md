@@ -49,8 +49,7 @@ Os valores monetários não estavam com os separadores decimais corretos. Cada c
 **4. Ruído em `TotalCharges`**
 Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então os ruídos foram mantidos — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
 
->  Todo o processo de limpeza está disponível em [`01 - Limpeza_de_Dados.sql`](./querys/01%20-%20Limpeza_de_Dados.sql).
-
+>  Todo o processo de limpeza está disponível em [01 - Limpeza_de_Dados.sql](https://github.com/biannca-ferreira/analise-churn-telecom/blob/main/Querys/01%20-%20Limpeza_de_Dados.sql)
 ## Análise Exploratória (EDA)
 
 Após a limpeza, foi realizada uma Análise Exploratória de Dados (EDA) com o objetivo de compreender o comportamento da base, identificar padrões e definir quais variáveis seriam utilizadas nas análises e no dashboard.
