@@ -49,8 +49,7 @@ Os valores monetários não estavam com os separadores decimais corretos. Cada c
 **4. Ruído em `TotalCharges`**
 Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então os ruídos foram mantidos — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
 
->  Todo o processo de limpeza está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
-
+>  Todo o processo de limpeza está disponível em [`01 - Limpeza_de_Dados.sql`](./querys/01%20-%20Limpeza_de_Dados.sql).
 
 ## Análise Exploratória (EDA)
 
@@ -78,7 +77,7 @@ Após a limpeza, foi realizada uma Análise Exploratória de Dados (EDA) com o o
 | Churn em clientes com mensalidade mais alta | **52,46%** |
 | Tempo médio até o churn | **31 meses** (mediana de 28 meses) |
 
-> Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./02%20-%20EDA.sql).
+> Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./querys/02%20-%20EDA.sql).
 
 ## Preparação dos dados para o dashboard
 
@@ -93,7 +92,7 @@ Antes de conectar os dados ao Power BI, foi criada uma **view** no SQL Server co
 
 <img src="images/dashboard-view-sql.png" alt="View criada para o dashboard" width="650"/>
 
-> O código completo da view está disponível em [`03 - View_Dashboard.sql`](./03%20-%20View_Dashboard.sql).
+> O código completo da view está disponível em [`03 - View_Dashboard.sql`](./querys/03%20-%20View_Dashboard.sql).
 
 
 ## Visualização dos dados
@@ -102,7 +101,7 @@ O objetivo do dashboard foi transformar as análises realizadas em SQL em uma fe
 
 <img src="images/dashboard-overview.png" alt="Dashboard de Análise de Churn Telecom" width="800"/>
 
-**[Acessar o dashboard](#)** <!-- [inserir link do dashboard](https://app.powerbi.com/view?r=eyJrIjoiZWJmOGY3OGEtMzU5NS00ZDljLWE3YTgtNzhmNTI2OGRjOThjIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9) -->
+**[Acessar o dashboard](https://app.powerbi.com/view?r=eyJrIjoiZWJmOGY3OGEtMzU5NS00ZDljLWE3YTgtNzhmNTI2OGRjOThjIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)** 
 
 **Planejamento do dashboard:**
 - Definir os melhores indicadores
