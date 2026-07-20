@@ -49,7 +49,7 @@ Os valores monetários não estavam com os separadores decimais corretos. Cada c
 **4. Ruído em `TotalCharges`**
 Por se tratar de uma base gerada artificialmente, um pequeno ruído foi atribuído aos valores de `TotalCharges` — mesmo com a regra `Tenure * MonthlyCharges = TotalCharges`, apenas 269 linhas são 100% compatíveis com o cálculo. Esse ruído pode representar fatores como juros, descontos ou mudanças de contrato, então os ruídos foram mantidos — mas a coluna `TotalCharges` foi **excluída das análises** por não ser 100% confiável.
 
->  Todo o processo de limpeza, incluindo os comandos SQL utilizados, está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
+>  Todo o processo de limpeza está disponível em [`01 - Limpeza_de_Dados.sql`](./01%20-%20Limpeza_de_Dados.sql).
 
 
 ## Análise Exploratória (EDA)
@@ -68,8 +68,6 @@ Após a limpeza, foi realizada uma Análise Exploratória de Dados (EDA) com o o
 - Qual o impacto mensal financeiro do churn?
 - Quais clientes apresentam perfil que pode indicar um possível churn futuro?
 
-As perguntas de gênero, método de pagamento, faixa etária e risco futuro são exploradas de forma interativa via segmentações do dashboard; os principais achados quantitativos do restante estão resumidos abaixo.
-
 **Principais insights:**
 
 | Métrica | Resultado |
@@ -80,7 +78,7 @@ As perguntas de gênero, método de pagamento, faixa etária e risco futuro são
 | Churn em clientes com mensalidade mais alta | **52,46%** |
 | Tempo médio até o churn | **31 meses** (mediana de 28 meses) |
 
-> 📄 Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./02%20-%20EDA.sql).
+> Todas as consultas utilizadas na EDA estão disponíveis em [`02 - EDA.sql`](./02%20-%20EDA.sql).
 
 ## Preparação dos dados para o dashboard
 
@@ -130,7 +128,7 @@ O objetivo do dashboard foi transformar as análises realizadas em SQL em uma fe
 
 A maior taxa de churn foi observada entre clientes com contratos **Month-to-Month (46,56%)**, significativamente superior aos contratos de 1 ano (16,75%) e 2 anos (16,88%) — indicando que contratos de curto prazo favorecem a decisão de cancelamento.
 
-O tempo de permanência também é um fator relevante: embora o tempo médio até o churn seja de 30 meses, a maior concentração de cancelamentos ocorre nos **primeiros 12 meses**, período em que a taxa de churn alcança **64,01%**. Isso sugere que os primeiros meses são decisivos para a retenção, podendo indicar dificuldades no onboarding, na adaptação ao serviço ou na geração de valor logo após a contratação.
+O tempo de permanência também é um fator relevante: embora o tempo médio até o churn seja de aproximandamente 31 meses, a maior concentração de cancelamentos ocorre nos **primeiros 12 meses**, período em que a taxa de churn alcança **64,01%**. Isso sugere que os primeiros meses são decisivos para a retenção, podendo indicar dificuldades no onboarding, na adaptação ao serviço ou na geração de valor logo após a contratação.
 
 A mensalidade também mostrou forte relação com o cancelamento: clientes que pagam mais de **$100/mês** têm taxa de churn de **52,46%**, o que pode indicar percepção insuficiente de custo-benefício nos planos de maior valor.
 
@@ -143,11 +141,11 @@ Os resultados indicam que o churn não ocorre de forma aleatória, mas está con
 
 Com base nesse perfil, algumas estratégias podem contribuir para reduzir a taxa de cancelamento:
 
-- Fortalecer o processo de onboarding e o acompanhamento dos clientes durante os primeiros 12 meses, período de maior risco de churn;
+- Fortalecer o processo de onboarding e o acompanhamento dos clientes durante os primeiros 12 meses;
 - Criar incentivos para migração de contratos Month-to-Month para planos anuais ou bienais, reduzindo a facilidade de cancelamento;
 - Revisar a estratégia de precificação dos planos de maior valor, avaliando se o preço está alinhado ao valor percebido pelo cliente ou se benefícios adicionais podem aumentar sua retenção.
 
-Como os contratos Month-to-Month concentram cerca de **$2,1 milhões** em receita comprometida (73,65% da receita total perdida), essas ações representam a maior oportunidade de impacto financeiro na redução do churn.
+---
 
 > *Esta análise identifica correlações entre as características dos clientes e o churn, mas não estabelece relações de causa e efeito. Os resultados servem para direcionar investigações e ações de negócio, que devem ser complementadas por análises adicionais e testes para validar a eficácia das estratégias propostas.*
 
